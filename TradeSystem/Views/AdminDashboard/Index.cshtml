@@ -1,0 +1,49 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+<div class="container">
+    <h2 class="mb-4">Welcome, @ViewBag.UserName</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body"><h5 class="card-title">Manage Users</h5><p class="card-text">Add/edit roles and accounts.</p>
+                    <a href="#" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body"><h5 class="card-title">Letters of Credit</h5><p class="card-text">Review/approve LC requests.</p>
+                    <a href="@Url.Action("Index", "LetterOfCredit")" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body"><h5 class="card-title">Bank Guarantees</h5><p class="card-text">Issue & monitor guarantees.</p>
+                    <a href="@Url.Action("Index", "BankGuarantee")" class="btn btn-primary">Go</a>
+                    </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body">
+                    <h5 class="card-title">Trade Documents</h5>
+                    <p class="card-text">Review documents uploaded by users.</p>
+                    <a asp-controller="TradeDocument" asp-action="Index" class="btn btn-primary">Go</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body"><h5 class="card-title">Risk Assessment</h5><p class="card-text">Analyze risk metrics.</p><a href="#" class="btn btn-primary">Go</a></div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 h-100">
+                <div class="card-body"><h5 class="card-title">Compliance</h5><p class="card-text">Generate regulatory reports.</p><a href="#" class="btn btn-primary">Go</a></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,80 @@
+[
+  {
+    "ContainingType": "TradeSystem.Controllers.ComplianceController",
+    "Method": "GetAll",
+    "RelativePath": "api/Compliance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[TradeSystem.Models.Compliance, TradeSystem, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TradeSystem.Controllers.ComplianceController",
+    "Method": "GetById",
+    "RelativePath": "api/Compliance/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "TradeSystem.Models.Compliance",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "TradeSystem.Controllers.ComplianceController",
+    "Method": "GenerateReport",
+    "RelativePath": "api/Compliance/generate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compliance",
+        "Type": "TradeSystem.Models.Compliance",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "TradeSystem.Controllers.ComplianceController",
+    "Method": "SubmitReport",
+    "RelativePath": "api/Compliance/submit",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "compliance",
+        "Type": "TradeSystem.Models.Compliance",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

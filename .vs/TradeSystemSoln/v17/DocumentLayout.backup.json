@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\views\\tradedocument\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\views\\tradedocument\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\views\\tradedocument\\upload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\views\\tradedocument\\upload.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\services\\tradedocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\services\\tradedocumentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\views\\admindashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\views\\admindashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\controllers\\tradedocumentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\controllers\\tradedocumentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\views\\tradedocument\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\views\\tradedocument\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\views\\tradedocument\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\views\\tradedocument\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\data\\tfmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\data\\tfmsdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\views\\userdashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\views\\userdashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|c:\\users\\2420924\\source\\repos\\tradesystemsoln\\tradesystem\\models\\letterofcredit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{704E65F2-51D6-40F0-8B63-2CCB7E92864E}|TradeSystem\\TradeSystem.csproj|solutionrelative:tradesystem\\models\\letterofcredit.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 516,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\AdminDashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "TradeSystem\\Views\\AdminDashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\AdminDashboard\\Index.cshtml",
+              "RelativeToolTip": "TradeSystem\\Views\\AdminDashboard\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T10:32:41.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TradeSystem\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TradeSystem\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T10:24:04.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\UserDashboard\\Index.cshtml",
+              "RelativeDocumentMoniker": "TradeSystem\\Views\\UserDashboard\\Index.cshtml",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\UserDashboard\\Index.cshtml",
+              "RelativeToolTip": "TradeSystem\\Views\\UserDashboard\\Index.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T09:49:43.634Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "LetterOfCredit.cs",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Models\\LetterOfCredit.cs",
+              "RelativeDocumentMoniker": "TradeSystem\\Models\\LetterOfCredit.cs",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Models\\LetterOfCredit.cs",
+              "RelativeToolTip": "TradeSystem\\Models\\LetterOfCredit.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAswDEAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T09:46:56.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\TradeDocument\\Edit.cshtml",
+              "RelativeDocumentMoniker": "TradeSystem\\Views\\TradeDocument\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\TradeDocument\\Edit.cshtml",
+              "RelativeToolTip": "TradeSystem\\Views\\TradeDocument\\Edit.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T09:45:20.118Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\TradeDocument\\Details.cshtml",
+              "RelativeDocumentMoniker": "TradeSystem\\Views\\TradeDocument\\Details.cshtml",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\TradeDocument\\Details.cshtml",
+              "RelativeToolTip": "TradeSystem\\Views\\TradeDocument\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T09:44:47.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Upload.cshtml",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\TradeDocument\\Upload.cshtml",
+              "RelativeDocumentMoniker": "TradeSystem\\Views\\TradeDocument\\Upload.cshtml",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\TradeDocument\\Upload.cshtml",
+              "RelativeToolTip": "TradeSystem\\Views\\TradeDocument\\Upload.cshtml",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABsAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T09:42:30.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\TradeDocument\\Index.cshtml",
+              "RelativeDocumentMoniker": "TradeSystem\\Views\\TradeDocument\\Index.cshtml",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Views\\TradeDocument\\Index.cshtml",
+              "RelativeToolTip": "TradeSystem\\Views\\TradeDocument\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAgwCUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-15T09:41:48.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TradeDocumentController.cs",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Controllers\\TradeDocumentController.cs",
+              "RelativeDocumentMoniker": "TradeSystem\\Controllers\\TradeDocumentController.cs",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Controllers\\TradeDocumentController.cs",
+              "RelativeToolTip": "TradeSystem\\Controllers\\TradeDocumentController.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAgwHoAAABsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T09:37:45.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TradeDocumentService.cs",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Services\\TradeDocumentService.cs",
+              "RelativeDocumentMoniker": "TradeSystem\\Services\\TradeDocumentService.cs",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Services\\TradeDocumentService.cs",
+              "RelativeToolTip": "TradeSystem\\Services\\TradeDocumentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFEAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T09:35:55.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TfmsDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Data\\TfmsDbContext.cs",
+              "RelativeDocumentMoniker": "TradeSystem\\Data\\TfmsDbContext.cs",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Data\\TfmsDbContext.cs",
+              "RelativeToolTip": "TradeSystem\\Data\\TfmsDbContext.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAgwCcAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T13:37:46.656Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Program.cs",
+              "RelativeDocumentMoniker": "TradeSystem\\Program.cs",
+              "ToolTip": "C:\\Users\\2420924\\source\\repos\\TradeSystemSoln\\TradeSystem\\Program.cs",
+              "RelativeToolTip": "TradeSystem\\Program.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAAAgwEQAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-13T12:35:23.716Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

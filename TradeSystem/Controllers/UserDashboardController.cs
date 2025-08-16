@@ -1,14 +1,22 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using TradeSystem.Models;
 
 namespace TradeSystem.Controllers
 {
     [Authorize(Roles = "User")]
     public class UserDashboardController : Controller
     {
-        public IActionResult Index()
+        private readonly UserManager<ApplicationUser> _userManager;
+        public UserDashboardController(UserManager<ApplicationUser> userManager)
         {
-            ViewBag.UserName = User.Identity?.Name ?? "User";
+            _userManager = userManager;
+        }
+        public async Task<IActionResult> Index()
+        {
+            var user = await _userManager.GetUserAsync(User);
+            ViewBag.UserName = (user != null && !string.IsNullOrWhiteSpace(user.FullName)) ? user.FullName : (User.Identity?.Name ?? "User");
             return View();
         }
     }

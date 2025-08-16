@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using TradeSystem.Models;
 
@@ -25,10 +25,7 @@ namespace TradeSystem.Data
                    .Property(b => b.Status)
                    .HasConversion<string>();
 
-            // Store TdStatus as string
-            builder.Entity<TradeDocument>()
-                   .Property(t => t.Status)
-                   .HasConversion<string>();
+            // TradeDocument.Status stored as numeric enum (removed string conversion)
 
             // LetterOfCredit → TradeDocuments (No Cascade)
             builder.Entity<LetterOfCredit>()

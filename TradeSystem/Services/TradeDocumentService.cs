@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using TradeSystem.Data;
 using TradeSystem.Interfaces;
 using TradeSystem.Models;
@@ -28,6 +28,7 @@ namespace TradeSystem.Services
                     return false;
                 }
 
+                // Always set server timestamps and defaults
                 doc.UploadDate = DateTime.Now;
                 if (doc.Status == 0) doc.Status = TdStatus.Active;
 

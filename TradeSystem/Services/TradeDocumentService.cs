@@ -38,6 +38,7 @@ namespace TradeSystem.Services
 
             _context.TradeDocuments.Add(doc);
             const int maxRetries = 3;
+            DbUpdateException? lastDbUpdateException = null;
             for (int attempt = 0; attempt < maxRetries; attempt++)
             {
                 try
@@ -47,10 +48,15 @@ namespace TradeSystem.Services
                 }
                 catch (DbUpdateException ex)
                 {
-                    // If unique constraint violation on ReferenceNumber; try a new one and retry
+                    lastDbUpdateException = ex;
                     _logger.LogWarning(ex, "Save failed, retrying with new ReferenceNumber (attempt {attempt})", attempt + 1);
                     doc.ReferenceNumber = GenerateUniqueReference();
                 }
+            }
+            // Surface the last database exception so the UI can show the real cause
+            if (lastDbUpdateException != null)
+            {
+                throw lastDbUpdateException;
             }
             throw new InvalidOperationException("Could not save Trade Document after multiple attempts. Please try again.");
         }

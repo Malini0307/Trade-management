@@ -96,12 +96,10 @@ namespace TradeSystem.Controllers
 
         [Authorize(Roles = "User")]
         [HttpPost, ValidateAntiForgeryToken]
-        public async Task<IActionResult> Upload(TradeDocument doc)
+        public async Task<IActionResult> Upload([Bind("DocumentType,Status,LcId,GuaranteeId")] TradeDocument doc)
         {
             // Set server-controlled fields first and exclude them from validation
-            doc.ReferenceNumber = string.IsNullOrWhiteSpace(doc.ReferenceNumber)
-                                  ? GenerateUniqueReference()
-                                  : doc.ReferenceNumber;
+            doc.ReferenceNumber = GenerateUniqueReference();
 
             doc.UploadedBy = await GetCurrentDisplayNameAsync();
 
@@ -119,7 +117,7 @@ namespace TradeSystem.Controllers
             {
                 if (!_service.UploadDocument(doc))
                 {
-                    ModelState.AddModelError("", "Failed to upload document (duplicate reference or server error).");
+                    ModelState.AddModelError("", "Failed to upload document (duplicate reference or server error). Please try again.");
                     LoadLookups();
                     return View(doc);
                 }

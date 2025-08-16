@@ -10,6 +10,8 @@ namespace TradeSystem.Services
     {
         private readonly TfmsDbContext _context;
         private readonly ILogger<TradeDocumentService> _logger;
+        private static readonly object _rngLock = new object();
+        private static readonly Random _rng = new Random();
 
         public TradeDocumentService(TfmsDbContext context, ILogger<TradeDocumentService> logger)
         {
@@ -17,15 +19,33 @@ namespace TradeSystem.Services
             _logger = logger;
         }
 
+        private string GenerateUniqueReference()
+        {
+            string candidate;
+            int attempts = 0;
+            do
+            {
+                lock (_rngLock)
+                {
+                    candidate = "ABC" + _rng.Next(10000, 99999);
+                }
+                attempts++;
+                if (attempts > 50)
+                {
+                    throw new InvalidOperationException("Unable to generate unique reference number after multiple attempts.");
+                }
+            } while (_context.TradeDocuments.Any(d => d.ReferenceNumber == candidate));
+            return candidate;
+        }
+
         public bool UploadDocument(TradeDocument doc)
         {
             try
             {
-                // Ensure unique ReferenceNumber
-                if (_context.TradeDocuments.Any(d => d.ReferenceNumber == doc.ReferenceNumber))
+                // Ensure unique ReferenceNumber (generate if missing or duplicate)
+                if (string.IsNullOrWhiteSpace(doc.ReferenceNumber) || _context.TradeDocuments.Any(d => d.ReferenceNumber == doc.ReferenceNumber))
                 {
-                    _logger.LogWarning("Duplicate ReferenceNumber: {refNum}", doc.ReferenceNumber);
-                    return false;
+                    doc.ReferenceNumber = GenerateUniqueReference();
                 }
 
                 // Always set server timestamps and defaults
@@ -33,8 +53,24 @@ namespace TradeSystem.Services
                 if (doc.Status == 0) doc.Status = TdStatus.Active;
 
                 _context.TradeDocuments.Add(doc);
-                _context.SaveChanges();
-                return true;
+                const int maxRetries = 3;
+                for (int attempt = 0; attempt < maxRetries; attempt++)
+                {
+                    try
+                    {
+                        _context.SaveChanges();
+                        return true;
+                    }
+                    catch (DbUpdateException ex)
+                    {
+                        // Likely unique constraint violation on ReferenceNumber; try a new one
+                        _logger.LogWarning(ex, "Save failed, retrying with new ReferenceNumber (attempt {attempt})", attempt + 1);
+                        doc.ReferenceNumber = GenerateUniqueReference();
+                        // loop and retry
+                    }
+                }
+                _logger.LogError("Exceeded max retries saving TradeDocument with unique ReferenceNumber.");
+                return false;
             }
             catch (Exception ex)
             {

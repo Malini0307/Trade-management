@@ -10,8 +10,7 @@ namespace TradeSystem.Services
     {
         private readonly TfmsDbContext _context;
         private readonly ILogger<TradeDocumentService> _logger;
-        private static readonly object _rngLock = new object();
-        private static readonly Random _rng = new Random();
+        
 
         public TradeDocumentService(TfmsDbContext context, ILogger<TradeDocumentService> logger)
         {
@@ -21,21 +20,8 @@ namespace TradeSystem.Services
 
         private string GenerateUniqueReference()
         {
-            string candidate;
-            int attempts = 0;
-            do
-            {
-                lock (_rngLock)
-                {
-                    candidate = "ABC" + _rng.Next(10000, 99999);
-                }
-                attempts++;
-                if (attempts > 50)
-                {
-                    throw new InvalidOperationException("Unable to generate unique reference number after multiple attempts.");
-                }
-            } while (_context.TradeDocuments.Any(d => d.ReferenceNumber == candidate));
-            return candidate;
+            // GUID-based unique reference with short length, prefixed
+            return "ABC" + Guid.NewGuid().ToString("N").Substring(0, 6).ToUpperInvariant();
         }
 
         public bool UploadDocument(TradeDocument doc)

@@ -87,7 +87,6 @@ namespace TradeSystem.Controllers
         {
             var model = new TradeDocument
             {
-                ReferenceNumber = GenerateUniqueReference(),
                 Status = TdStatus.Active
             };
             LoadLookups();
@@ -96,11 +95,8 @@ namespace TradeSystem.Controllers
 
         [Authorize(Roles = "User")]
         [HttpPost, ValidateAntiForgeryToken]
-        public async Task<IActionResult> Upload([Bind("DocumentType,Status,LcId,GuaranteeId")] TradeDocument doc)
+        public async Task<IActionResult> Upload([Bind("DocumentType,Status,LcId,GuaranteeId,ReferenceNumber")] TradeDocument doc)
         {
-            // Set server-controlled fields first and exclude them from validation
-            doc.ReferenceNumber = GenerateUniqueReference();
-
             doc.UploadedBy = await GetCurrentDisplayNameAsync();
 
             ModelState.Remove(nameof(TradeDocument.ReferenceNumber));

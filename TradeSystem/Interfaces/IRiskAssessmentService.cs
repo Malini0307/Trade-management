@@ -1,10 +1,12 @@
-﻿using TradeSystem.Models;
+using TradeSystem.Models;
 
 namespace TradeSystem.Interfaces
 {
     public interface IRiskAssessmentService
     {
-        RiskAssessment AnalyzeRisk(string transactionReference);
+        RiskAssessment AnalyzeByLcId(int lcId);
+        RiskAssessment AnalyzeByBgId(int guaranteeId);
+        RiskAssessment AnalyzeByReference(string referenceNumber);
         decimal GetRiskScore(int riskId);
     }
 }

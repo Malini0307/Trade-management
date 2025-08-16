@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;
 using TradeSystem.Data;
 using TradeSystem.Interfaces;
 using TradeSystem.Models;
@@ -15,36 +15,32 @@ namespace TradeSystem.Controllers
             _riskService = riskService;
         }
 
-        [HttpPost("analyze")]
-        public ActionResult<RiskAssessment> AnalyzeRisk([FromBody] string transactionReference)
+        [HttpPost("analyze/lc/{lcId}")]
+        public ActionResult<RiskAssessment> AnalyzeByLc(int lcId)
         {
-            if (string.IsNullOrWhiteSpace(transactionReference))
-                return BadRequest("Transaction reference is required.");
-
-            try
-            {
-                var assessment = _riskService.AnalyzeRisk(transactionReference);
-                return Ok(assessment);
-            }
-            catch (ArgumentException ex)
-            {
-                return NotFound(ex.Message);
-            }
+            try { return Ok(_riskService.AnalyzeByLcId(lcId)); }
+            catch (ArgumentException ex) { return NotFound(ex.Message); }
         }
 
-        // GET: api/RiskAssessment/score/5
+        [HttpPost("analyze/bg/{guaranteeId}")]
+        public ActionResult<RiskAssessment> AnalyzeByBg(int guaranteeId)
+        {
+            try { return Ok(_riskService.AnalyzeByBgId(guaranteeId)); }
+            catch (ArgumentException ex) { return NotFound(ex.Message); }
+        }
+
+        [HttpPost("analyze/ref")]
+        public ActionResult<RiskAssessment> AnalyzeByReference([FromBody] string referenceNumber)
+        {
+            try { return Ok(_riskService.AnalyzeByReference(referenceNumber)); }
+            catch (ArgumentException ex) { return NotFound(ex.Message); }
+        }
+
         [HttpGet("score/{riskId}")]
         public ActionResult<decimal> GetRiskScore(int riskId)
         {
-            try
-            {
-                var score = _riskService.GetRiskScore(riskId);
-                return Ok(score);
-            }
-            catch (ArgumentException ex)
-            {
-                return NotFound(ex.Message);
-            }
+            try { return Ok(_riskService.GetRiskScore(riskId)); }
+            catch (ArgumentException ex) { return NotFound(ex.Message); }
         }
     }
 }

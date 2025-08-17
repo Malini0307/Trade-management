@@ -1,15 +1,18 @@
 @{
     ViewData["Title"] = "Risk Assessment";
+    var lcs = (SelectList)ViewBag.LCs;
 }
 <div class="container mt-4">
   <h2>Collective Risk Assessment</h2>
-  <p class="text-muted">Enter an LC Id to assess risk collectively across its LC, related BGs, and linked Trade Documents.</p>
+  <p class="text-muted">Select a Letter of Credit to assess risk collectively across its LC, related BGs, and linked Trade Documents.</p>
 
   <div class="row g-3 my-3">
     <div class="col-md-6">
-      <label class="form-label">LC Id</label>
+      <label class="form-label">Letter of Credit</label>
       <div class="input-group">
-        <input type="number" id="lcId" class="form-control" placeholder="LC Id">
+        <select id="lcId" class="form-select" asp-items="lcs">
+          <option value="">-- Select LC --</option>
+        </select>
         <button class="btn btn-primary" onclick="analyzeCollective()">Analyze</button>
       </div>
     </div>
@@ -21,7 +24,8 @@
 @section Scripts {
 <script>
 async function analyzeCollective() {
-  const id = document.getElementById('lcId').value;
+  const sel = document.getElementById('lcId');
+  const id = sel && sel.value ? sel.value : '';
   if (!id) return;
   const res = await fetch(`/RiskAssessment/analyze/collective/${id}`, { method: 'POST' });
   await showResult(res);

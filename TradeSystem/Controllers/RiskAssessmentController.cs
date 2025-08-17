@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using TradeSystem.Data;
 using TradeSystem.Interfaces;
 using TradeSystem.Models;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace TradeSystem.Controllers
 {
@@ -14,6 +15,23 @@ namespace TradeSystem.Controllers
         public RiskAssessmentController(IRiskAssessmentService riskService, TfmsDbContext context)
         {
             _riskService = riskService;
+            this.context = context;
+        }
+
+        [HttpGet]
+        public IActionResult Index()
+        {
+            var lcItems = context.LetterOfCredits
+                                  .Where(l => l.Status == LCStatus.Open || l.Status == LCStatus.Amended)
+                                  .OrderByDescending(l => l.LcId)
+                                  .Select(l => new SelectListItem
+                                  {
+                                      Value = l.LcId.ToString(),
+                                      Text = $"LC #{l.LcId} — {l.ApplicantName} → {l.BeneficiaryName} ({l.Currency} {l.Amount})"
+                                  })
+                                  .ToList();
+            ViewBag.LCs = new SelectList(lcItems, "Value", "Text");
+            return View();
         }
 
         [HttpPost("analyze/lc/{lcId}")]

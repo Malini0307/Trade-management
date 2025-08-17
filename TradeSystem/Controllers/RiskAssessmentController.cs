@@ -11,25 +11,27 @@ namespace TradeSystem.Controllers
     {
         private readonly TfmsDbContext context;
         private readonly IRiskAssessmentService _riskService;
+        private readonly ILetterOfCreditService _lcService;
 
-        public RiskAssessmentController(IRiskAssessmentService riskService, TfmsDbContext context)
+        public RiskAssessmentController(IRiskAssessmentService riskService, TfmsDbContext context, ILetterOfCreditService lcService)
         {
             _riskService = riskService;
             this.context = context;
+            _lcService = lcService;
         }
 
         [HttpGet]
         public IActionResult Index()
         {
-            var lcItems = context.LetterOfCredits
-                                  .Where(l => l.Status == LCStatus.Open || l.Status == LCStatus.Amended)
-                                  .OrderByDescending(l => l.LcId)
-                                  .Select(l => new SelectListItem
-                                  {
-                                      Value = l.LcId.ToString(),
-                                      Text = $"LC #{l.LcId} — {l.ApplicantName} → {l.BeneficiaryName} ({l.Currency} {l.Amount})"
-                                  })
-                                  .ToList();
+            var lcItems = _lcService.GetAll()
+                                     .Where(l => l.Status == LCStatus.Open || l.Status == LCStatus.Amended)
+                                     .OrderByDescending(l => l.LcId)
+                                     .Select(l => new SelectListItem
+                                     {
+                                         Value = l.LcId.ToString(),
+                                         Text = $"LC #{l.LcId} — {l.ApplicantName} → {l.BeneficiaryName} ({l.Currency} {l.Amount})"
+                                     })
+                                     .ToList();
             ViewBag.LCs = new SelectList(lcItems, "Value", "Text");
             return View();
         }

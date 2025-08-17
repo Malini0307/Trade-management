@@ -7,6 +7,7 @@ namespace TradeSystem.Interfaces
         RiskAssessment AnalyzeByLcId(int lcId);
         RiskAssessment AnalyzeByBgId(int guaranteeId);
         RiskAssessment AnalyzeByReference(string referenceNumber);
+        RiskAssessment AnalyzeCollectiveByLcId(int lcId);
         decimal GetRiskScore(int riskId);
     }
 }

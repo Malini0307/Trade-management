@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
@@ -26,12 +26,44 @@ namespace TradeSystem.Controllers
         public IActionResult Login(string? role)
         {
             ViewBag.Role = role; // "Admin" or "User"
+
+            // If already authenticated, prevent role switching without logout
+            if (User.Identity?.IsAuthenticated == true)
+            {
+                var currentRole = User.IsInRole("Admin") ? "Admin" : (User.IsInRole("User") ? "User" : null);
+                if (string.IsNullOrEmpty(role) || string.Equals(currentRole, role, StringComparison.OrdinalIgnoreCase))
+                {
+                    // Already signed into the requested role (or no role specified) -> go to dashboard
+                    if (currentRole == "Admin") return RedirectToAction("Index", "AdminDashboard");
+                    if (currentRole == "User") return RedirectToAction("Index", "UserDashboard");
+                }
+                else
+                {
+                    // Prompt to logout first
+                    ViewBag.SwitchPrompt = $"You are currently signed in as {currentRole}. To sign in as {role}, please logout first.";
+                    ViewBag.ForceLogoutUrl = Url.Action("Logout", "Account", new { returnUrl = Url.Action("Login", "Account", new { role }) });
+                }
+            }
+
             return View();
         }
 
         [HttpPost, ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(string email, string password, string role)
         {
+            // If already authenticated with another role, block and ask to logout first
+            if (User.Identity?.IsAuthenticated == true)
+            {
+                var currentRole = User.IsInRole("Admin") ? "Admin" : (User.IsInRole("User") ? "User" : null);
+                if (!string.IsNullOrEmpty(currentRole) && !string.Equals(currentRole, role, StringComparison.OrdinalIgnoreCase))
+                {
+                    ViewBag.Error = $"You are currently signed in as {currentRole}. Please logout first to sign in as {role}.";
+                    ViewBag.Role = role;
+                    ViewBag.ForceLogoutUrl = Url.Action("Logout", "Account", new { returnUrl = Url.Action("Login", "Account", new { role }) });
+                    return View();
+                }
+            }
+
             if (string.IsNullOrWhiteSpace(email) || string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(role))
             {
                 ViewBag.Error = "All fields are required.";
@@ -58,6 +90,15 @@ namespace TradeSystem.Controllers
             return role == "Admin"
                 ? RedirectToAction("Index", "AdminDashboard")
                 : RedirectToAction("Index", "UserDashboard");
+        }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> Logout(string? returnUrl)
+        {
+            await _signInManager.SignOutAsync();
+            if (!string.IsNullOrEmpty(returnUrl)) return Redirect(returnUrl);
+            return RedirectToAction("Index", "Home");
         }
 
         [HttpGet]
@@ -96,13 +137,6 @@ namespace TradeSystem.Controllers
             await _userManager.AddToRoleAsync(user, role);
             TempData["Msg"] = "Registration successful. Please login.";
             return RedirectToAction("Login", new { role });
-        }
-
-        [Authorize]
-        public async Task<IActionResult> Logout()
-        {
-            await _signInManager.SignOutAsync();
-            return RedirectToAction("Index", "Home");
         }
 
         public IActionResult AccessDenied() => View();

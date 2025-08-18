@@ -1,4 +1,4 @@
-﻿@model TradeSystem.Models.TradeDocument
+@model TradeSystem.Models.TradeDocument
 @{
     ViewData["Title"] = "Upload Trade Document";
     var docTypes = (SelectList)ViewBag.DocTypes;
@@ -9,12 +9,13 @@
     <h2 class="mb-3">Upload Trade Document</h2>
     <form asp-action="Upload" method="post" class="card p-4 shadow-sm border-0">
         @Html.AntiForgeryToken()
+        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
         <div class="row g-3">
             <div class="col-md-4">
-                <label class="form-label">Reference Number</label>
-                <input asp-for="ReferenceNumber" class="form-control" readonly />
-                <span class="form-text">Auto-generated and unique</span>
+                <label class="form-label">Reference Number (optional)</label>
+                <input asp-for="ReferenceNumber" class="form-control" />
+                <span class="form-text">Leave blank to auto-generate a unique value</span>
             </div>
             <div class="col-md-4">
                 <label class="form-label">Document Type</label>

@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -87,7 +87,6 @@ namespace TradeSystem.Controllers
         {
             var model = new TradeDocument
             {
-                ReferenceNumber = GenerateUniqueReference(),
                 Status = TdStatus.Active
             };
             LoadLookups();
@@ -96,8 +95,14 @@ namespace TradeSystem.Controllers
 
         [Authorize(Roles = "User")]
         [HttpPost, ValidateAntiForgeryToken]
-        public async Task<IActionResult> Upload(TradeDocument doc)
+        public async Task<IActionResult> Upload([Bind("DocumentType,Status,LcId,GuaranteeId,ReferenceNumber")] TradeDocument doc)
         {
+            doc.UploadedBy = await GetCurrentDisplayNameAsync();
+
+            ModelState.Remove(nameof(TradeDocument.ReferenceNumber));
+            ModelState.Remove(nameof(TradeDocument.UploadedBy));
+            ModelState.Remove(nameof(TradeDocument.UploadDate));
+
             if (!ModelState.IsValid)
             {
                 LoadLookups();
@@ -106,21 +111,14 @@ namespace TradeSystem.Controllers
 
             try
             {
-                // Force server-side values
-                doc.ReferenceNumber = string.IsNullOrWhiteSpace(doc.ReferenceNumber)
-                                      ? GenerateUniqueReference()
-                                      : doc.ReferenceNumber;
-
-                doc.UploadedBy = await GetCurrentDisplayNameAsync();
-
                 if (!_service.UploadDocument(doc))
                 {
-                    ModelState.AddModelError("", "Failed to upload document (duplicate reference or server error).");
+                    ModelState.AddModelError("", "Failed to upload document (duplicate reference or server error). Please try again.");
                     LoadLookups();
                     return View(doc);
                 }
 
-                return Content("<script>window.location.href='/TradeDocument/Index';</script>","text/html");
+                return RedirectToAction(nameof(Index));
             }
             catch(Exception ex)
             {

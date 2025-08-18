@@ -1,4 +1,5 @@
-﻿<header>
+@inject Microsoft.AspNetCore.Identity.UserManager<TradeSystem.Models.ApplicationUser> UserManager
+<header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-semibold" href="/">Trade Finance Management System</a>
@@ -20,7 +21,9 @@
                         {
                             <li class="nav-item"><a class="nav-link" href="/UserDashboard">User Dashboard</a></li>
                         }
-                        <li class="nav-item"><span class="navbar-text ms-3 text-white">Hello @User.Identity!.Name</span></li>
+                        var currentUser = await UserManager.GetUserAsync(User);
+                        var displayName = (currentUser != null && !string.IsNullOrWhiteSpace(currentUser.FullName)) ? currentUser.FullName : (User.Identity?.Name ?? "");
+                        <li class="nav-item"><span class="navbar-text ms-3 text-white">Hello @displayName</span></li>
                         <li class="nav-item"><a class="nav-link" href="/Account/Logout">Logout</a></li>
                     }
                     @* else

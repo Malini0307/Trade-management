@@ -1,4 +1,4 @@
-﻿@{
+@{
     ViewData["Title"] = "Login";
     var role = (string?)ViewBag.Role ?? "";
     // Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,15 +7,29 @@
     <h2 class="text-center mb-4">Login @if(!string.IsNullOrEmpty(role)){
     <text>as <strong>@role</strong></text>
         }
-</h2>
+    </h2>
 
     @if (TempData["Msg"] != null)
     {
         <div class="alert alert-success w-50 mx-auto text-center">@TempData["Msg"]</div>
     }
 
+    @if (ViewBag.SwitchPrompt != null)
+    {
+        <div class="alert alert-warning w-50 mx-auto text-center">
+            @ViewBag.SwitchPrompt
+            @if (ViewBag.ForceLogoutUrl != null)
+            {
+                <div class="mt-2"><a class="btn btn-sm btn-outline-danger" href="@ViewBag.ForceLogoutUrl">Logout and continue</a></div>
+            }
+        </div>
+    }
+
     <form method="post" class="w-50 mx-auto card p-4 shadow-sm border-0">
-        <input type="hidden" name="role" value="@role" />
+        @if (!string.IsNullOrEmpty(role))
+        {
+            <input type="hidden" name="role" value="@role" />
+        }
         <div class="mb-3">
             <label class="form-label">Email</label>
             <input name="email" type="email" class="form-control" required />

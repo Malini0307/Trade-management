@@ -17,125 +17,129 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TradeSystem
 build_property.RootNamespace = TradeSystem
-build_property.ProjectDir = C:\Users\2420924\source\repos\TradeSystemSoln\TradeSystem\
+build_property.ProjectDir = /workspace/TradeSystem/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\2420924\source\repos\TradeSystemSoln\TradeSystem
+build_property.MSBuildProjectDirectory = /workspace/TradeSystem
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Account/AccessDenied.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxBY2Nlc3NEZW5pZWQuY3NodG1s
+[/workspace/TradeSystem/Views/Account/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9BY2Nlc3NEZW5pZWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Account/Login.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+[/workspace/TradeSystem/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Account/Register.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+[/workspace/TradeSystem/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/AdminDashboard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5EYXNoYm9hcmRcSW5kZXguY3NodG1s
+[/workspace/TradeSystem/Views/AdminDashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5EYXNoYm9hcmQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/BankGuarantee/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0d1YXJhbnRlZVxDcmVhdGUuY3NodG1s
+[/workspace/TradeSystem/Views/BankGuarantee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmFua0d1YXJhbnRlZS9DcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/BankGuarantee/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0d1YXJhbnRlZVxJbmRleC5jc2h0bWw=
+[/workspace/TradeSystem/Views/BankGuarantee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmFua0d1YXJhbnRlZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/BankGuarantee/Issue.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0d1YXJhbnRlZVxJc3N1ZS5jc2h0bWw=
+[/workspace/TradeSystem/Views/BankGuarantee/Issue.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmFua0d1YXJhbnRlZS9Jc3N1ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/BankGuarantee/Track.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFua0d1YXJhbnRlZVxUcmFjay5jc2h0bWw=
+[/workspace/TradeSystem/Views/BankGuarantee/Track.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQmFua0d1YXJhbnRlZS9UcmFjay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Home/Contact.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+[/workspace/TradeSystem/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Db250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[/workspace/TradeSystem/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[/workspace/TradeSystem/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/LetterOfCredit/Amend.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV0dGVyT2ZDcmVkaXRcQW1lbmQuY3NodG1s
+[/workspace/TradeSystem/Views/LetterOfCredit/Amend.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGV0dGVyT2ZDcmVkaXQvQW1lbmQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/LetterOfCredit/Close.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV0dGVyT2ZDcmVkaXRcQ2xvc2UuY3NodG1s
+[/workspace/TradeSystem/Views/LetterOfCredit/Close.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGV0dGVyT2ZDcmVkaXQvQ2xvc2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/LetterOfCredit/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV0dGVyT2ZDcmVkaXRcQ3JlYXRlLmNzaHRtbA==
+[/workspace/TradeSystem/Views/LetterOfCredit/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGV0dGVyT2ZDcmVkaXQvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/LetterOfCredit/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV0dGVyT2ZDcmVkaXRcRGV0YWlscy5jc2h0bWw=
+[/workspace/TradeSystem/Views/LetterOfCredit/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGV0dGVyT2ZDcmVkaXQvRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/LetterOfCredit/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTGV0dGVyT2ZDcmVkaXRcSW5kZXguY3NodG1s
+[/workspace/TradeSystem/Views/LetterOfCredit/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvTGV0dGVyT2ZDcmVkaXQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Shared/Error.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+[/workspace/TradeSystem/Views/RiskAssessment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUmlza0Fzc2Vzc21lbnQvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Shared/_Footer.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
+[/workspace/TradeSystem/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Shared/_Header.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
+[/workspace/TradeSystem/Views/Shared/_Footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+[/workspace/TradeSystem/Views/Shared/_Header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/TradeDocument/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZGVEb2N1bWVudFxEZXRhaWxzLmNzaHRtbA==
+[/workspace/TradeSystem/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/TradeDocument/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZGVEb2N1bWVudFxFZGl0LmNzaHRtbA==
+[/workspace/TradeSystem/Views/TradeDocument/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhZGVEb2N1bWVudC9EZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/TradeDocument/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZGVEb2N1bWVudFxJbmRleC5jc2h0bWw=
+[/workspace/TradeSystem/Views/TradeDocument/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhZGVEb2N1bWVudC9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/TradeDocument/Upload.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhZGVEb2N1bWVudFxVcGxvYWQuY3NodG1s
+[/workspace/TradeSystem/Views/TradeDocument/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhZGVEb2N1bWVudC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/UserDashboard/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlckRhc2hib2FyZFxJbmRleC5jc2h0bWw=
+[/workspace/TradeSystem/Views/TradeDocument/Upload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVHJhZGVEb2N1bWVudC9VcGxvYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/_ViewImports.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+[/workspace/TradeSystem/Views/UserDashboard/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvVXNlckRhc2hib2FyZC9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/_ViewStart.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+[/workspace/TradeSystem/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/2420924/source/repos/TradeSystemSoln/TradeSystem/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-qbupzu6le3
+[/workspace/TradeSystem/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/workspace/TradeSystem/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-96zg0u24oo

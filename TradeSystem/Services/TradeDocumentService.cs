@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using TradeSystem.Data;
 using TradeSystem.Interfaces;
 using TradeSystem.Models;
@@ -10,6 +10,7 @@ namespace TradeSystem.Services
     {
         private readonly TfmsDbContext _context;
         private readonly ILogger<TradeDocumentService> _logger;
+        
 
         public TradeDocumentService(TfmsDbContext context, ILogger<TradeDocumentService> logger)
         {
@@ -17,29 +18,47 @@ namespace TradeSystem.Services
             _logger = logger;
         }
 
+        private string GenerateUniqueReference()
+        {
+            // GUID-based unique reference with short length, prefixed
+            return "ABC" + Guid.NewGuid().ToString("N").Substring(0, 6).ToUpperInvariant();
+        }
+
         public bool UploadDocument(TradeDocument doc)
         {
-            try
+            // Ensure unique ReferenceNumber (generate if missing or duplicate)
+            if (string.IsNullOrWhiteSpace(doc.ReferenceNumber) || _context.TradeDocuments.Any(d => d.ReferenceNumber == doc.ReferenceNumber))
             {
-                // Ensure unique ReferenceNumber
-                if (_context.TradeDocuments.Any(d => d.ReferenceNumber == doc.ReferenceNumber))
+                doc.ReferenceNumber = GenerateUniqueReference();
+            }
+
+            // Always set server timestamps and defaults
+            doc.UploadDate = DateTime.Now;
+            if (doc.Status == 0) doc.Status = TdStatus.Active;
+
+            _context.TradeDocuments.Add(doc);
+            const int maxRetries = 3;
+            DbUpdateException? lastDbUpdateException = null;
+            for (int attempt = 0; attempt < maxRetries; attempt++)
+            {
+                try
                 {
-                    _logger.LogWarning("Duplicate ReferenceNumber: {refNum}", doc.ReferenceNumber);
-                    return false;
+                    _context.SaveChanges();
+                    return true;
                 }
-
-                doc.UploadDate = DateTime.Now;
-                if (doc.Status == 0) doc.Status = TdStatus.Active;
-
-                _context.TradeDocuments.Add(doc);
-                _context.SaveChanges();
-                return true;
+                catch (DbUpdateException ex)
+                {
+                    lastDbUpdateException = ex;
+                    _logger.LogWarning(ex, "Save failed, retrying with new ReferenceNumber (attempt {attempt})", attempt + 1);
+                    doc.ReferenceNumber = GenerateUniqueReference();
+                }
             }
-            catch (Exception ex)
+            // Surface the last database exception so the UI can show the real cause
+            if (lastDbUpdateException != null)
             {
-                _logger.LogError(ex, "Error uploading document");
-                return false;
+                throw lastDbUpdateException;
             }
+            throw new InvalidOperationException("Could not save Trade Document after multiple attempts. Please try again.");
         }
 
         public TradeDocument? ViewDocument(int id)

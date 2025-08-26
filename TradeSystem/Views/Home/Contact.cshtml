@@ -1,7 +1,76 @@
-﻿@{
+@{
     ViewData["Title"] = "Contact";
 }
 <div class="container my-5">
-    <h2>Contact</h2>
-    <p class="lead">For support, email <a href="mailto:support@tfms.local">support@tfms.local</a>.</p>
+    <h2 class="mb-3">Contact</h2>
+    <p class="lead">We're here to help with anything related to Trade Finance Management (LCs, Bank Guarantees, Compliance, and Documents).</p>
+
+    <div class="row g-4 mt-3">
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Support Channels</h5>
+                    <p class="mb-2">General Support</p>
+                    <ul class="list-unstyled small">
+                        <li>Email: <a href="mailto:support@tfms.local">support@tfms.local</a></li>
+                        <li>Phone: <a href="tel:+10001234567">+1 (000) 123-4567</a></li>
+                        <li>Portal: <a href="#">Submit a support ticket</a></li>
+                    </ul>
+                    <hr />
+                    <p class="mb-2">Document Operations (Trade Documents, uploads, references)</p>
+                    <ul class="list-unstyled small">
+                        <li>Email: <a href="mailto:docs@tfms.local">docs@tfms.local</a></li>
+                        <li>Phone: <a href="tel:+10001234568">+1 (000) 123-4568</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Business Hours</h5>
+                    <ul class="list-unstyled small mb-3">
+                        <li>Support Desk: Mon–Fri, 08:00–18:00 (local time)</li>
+                        <li>Banking Hours (LC/BG processing): Mon–Fri, 09:00–17:00</li>
+                        <li>Emergency Trade Desk (critical LC/BG issues): 24×7</li>
+                    </ul>
+                    <p class="text-muted small mb-0">Response SLAs: P1 within 1 hour, P2 within 4 hours, P3 within 1 business day.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Departments</h5>
+                    <ul class="list-unstyled small">
+                        <li>Letters of Credit (LC): <a href="mailto:lc@tfms.local">lc@tfms.local</a></li>
+                        <li>Bank Guarantees (BG): <a href="mailto:bg@tfms.local">bg@tfms.local</a></li>
+                        <li>Risk Assessment: <a href="mailto:risk@tfms.local">risk@tfms.local</a></li>
+                        <li>Compliance & KYC: <a href="mailto:compliance@tfms.local">compliance@tfms.local</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">Headquarters</h5>
+                    <address class="small mb-2">
+                        Trade Finance Management System<br />
+                        100 Finance Way, Suite 500<br />
+                        Metropolis, NY 10001, USA
+                    </address>
+                    <p class="small mb-1">Security & Vulnerability Reports: <a href="mailto:security@tfms.local">security@tfms.local</a></p>
+                    <p class="small mb-0">Data Protection Officer (DPO): <a href="mailto:dpo@tfms.local">dpo@tfms.local</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="alert alert-info mt-4 small" role="alert">
+        For account access issues, ensure you use the correct role (Admin or User). If you need role changes, please contact your administrator or email <a href="mailto:support@tfms.local">support@tfms.local</a>.
+    </div>
 </div>
+@section Footer {
+    @await Html.PartialAsync("_Footer")
+}
